@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>My Blog</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <a href="/index.html">
+          <div><img src="./img/logo.svg" /></div>
+        </a>
+        <div class="manu" id="buttons">
+          <span id="newsBtn">News</span>
+          <a href="create.html">
+            <span id="createBtn">Create</span>
+          </a>
+          <a href="register.html">
+            <span id="registerBtn" class="link">Register</span>
+          </a>
+          <a href="login.html">
+            <span id="loginBtn" class="link">Log in</span>
+          </a>
+          <span id="logoutBtn" class="link">Log out</span>
+          <button class="btn">Subscribe</button>
+        </div>
+      </nav>
+      <div class="news">
+        <ul class="news-list" id="tasksList">
+          <li>
+            <div class="card-container">
+              <div class="bg-card">
+                <img
+                  src="./img/designbetter_website_book_assets_illustrations_designthinking_ideate-1920x1081.png"
+                  class="bg-img"
+                />
+                <p>
+                  <span class="gray-text">BY</span> TOMAS LAURINAVICIUS
+                  <span class="gray-text">IN</span> RESOURCE
+                </p>
+                <p class="title-bg">
+                  How to Migrate from Wix to WordPress (Complete Guide)
+                </p>
+              </div>
+            </div>
+          </li>
+        </ul>
+
+        <div class="load-more">
+          <button class="btn-lm">Load More</button>
+        </div>
+
+        <h3>Insta Stories</h3>
+
+        <p class="insta-stories"></p>
+        <footer class="footer">
+          <div class="footer-it">
+            <img src="./img/Group 13.png" />
+            <div class="social">
+              <img src="./img/Social Media.svg" />
+            </div>
+            <p>All Rights Reserved 2018 3layers</p>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script src="js/crud.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/islogedin.js"></script>
+  </body>
+</html>

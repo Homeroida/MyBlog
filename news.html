@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>News</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="nav">
+        <a href="/index.html">
+          <div><img src="./img/logo.svg" /></div>
+        </a>
+        <div class="manu" id="buttons">
+          <span id="newsBtn">News</span>
+          <a href="create.html">
+            <span id="createBtn">Create</span>
+          </a>
+          <a href="register.html">
+            <span id="registerBtn" class="link">Register</span>
+          </a>
+          <a href="login.html">
+            <span id="loginBtn" class="link">Log in</span>
+          </a>
+          <span id="logoutBtn" class="link">Log out</span>
+          <button class="btn">Subscribe</button>
+        </div>
+      </nav>
+      <div class="news">
+        <!-- Task details section -->
+        <div class="task-details news-details">
+          <img id="image_url" src="" alt="zur" class="news-img" />
+          <br />
+          <h2 id="title"></h2>
+          <br />
+          <div id="content"></div>
+        </div>
+
+        <!-- List of tasks section -->
+
+        <ul class="news-list" id="tasksList"></ul>
+      </div>
+      <footer class="footer">
+        <div class="footer-it">
+          <img src="./img/Group 13.png" />
+          <div class="social">
+            <img src="./img/Social Media.svg" />
+          </div>
+          <p>All Rights Reserved 2018 3layers</p>
+        </div>
+      </footer>
+    </div>
+    <script src="js/crud.js"></script>
+    <script src="js/news.js"></script>
+    <script src="js/islogedin.js"></script>
+  </body>
+</html>

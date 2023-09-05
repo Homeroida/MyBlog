@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="loginCard">
+      <h1>Login</h1>
+      <form class="login-form" id="login-form">
+        <input type="text" id="username" placeholder="Username" />
+        <input type="password" id="password" placeholder="Password" />
+        <button type="submit">Log In</button>
+      </form>
+      <div id="error-message" style="color: red"></div>
+    </div>
+    <script>
+      document
+        .getElementById("login-form")
+        .addEventListener("submit", async (event) => {
+          event.preventDefault();
+
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+
+          try {
+            const response = await fetch("http://127.0.0.1:8000/login/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                username: username,
+                password: password,
+              }),
+            });
+
+            if (response.ok) {
+              const data = await response.json();
+              localStorage.setItem("token", data.token); // Store the token in local storage
+              document.getElementById("error-message").textContent =
+                "successful";
+              window.location.href = "/"; // Redirect to the home page or another desired URL
+            } else {
+              document.getElementById("error-message").textContent =
+                "Login failed. Please check your credentials.";
+            }
+          } catch (error) {
+            console.error("An error occurred:", error);
+          }
+        });
+    </script>
+  </body>
+</html>
