@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="loginCard">
+    <!-- <div class="loginCard">
       <h1>Login</h1>
       <form class="login-form" id="login-form">
         <input type="text" id="username" placeholder="Username" />
@@ -15,6 +15,35 @@
         <button type="submit">Log In</button>
       </form>
       <div id="error-message" style="color: red"></div>
+    </div> -->
+
+    <div class="containerr">
+      <div class="wrapper">
+        <div class="title"><span>Login Form</span></div>
+        <form id="login-form">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Username" required />
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="pass"><a href="#">Forgot password?</a></div>
+          <div class="row button">
+            <input type="submit" value="Login" />
+          </div>
+          <div class="signup-link">
+            Not a member? <a href="register.html">Signup now</a>
+          </div>
+        </form>
+        <div id="error-message" style="color: red"></div>
+      </div>
     </div>
     <script>
       document
@@ -24,6 +53,7 @@
 
           const username = document.getElementById("username").value;
           const password = document.getElementById("password").value;
+          console.log(username);
 
           try {
             const response = await fetch("http://127.0.0.1:8000/login/", {

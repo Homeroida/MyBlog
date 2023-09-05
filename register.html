@@ -7,7 +7,7 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="loginCard">
+    <!-- <div class="loginCard">
       <h1>Register</h1>
       <form class="login-form" id="login-form">
         <input type="text" id="username" placeholder="Username" />
@@ -16,6 +16,39 @@
         <button type="submit">Log In</button>
       </form>
       <div id="error-message" style="color: red"></div>
+    </div> -->
+
+    <div class="containerr">
+      <div class="wrapper">
+        <div class="title"><span>Register Form</span></div>
+        <form id="login-form">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" id="username" placeholder="Username" required />
+          </div>
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <input type="text" id="email" placeholder="Email" required />
+          </div>
+          <div class="row">
+            <i class="fas fa-lock"></i>
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+
+          <div class="row button">
+            <input type="submit" value="Register" />
+          </div>
+          <div class="signup-link">
+            Member? <a href="login.html">Login now</a>
+          </div>
+        </form>
+        <div id="error-message" style="color: red"></div>
+      </div>
     </div>
     <script>
       document
