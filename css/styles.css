@@ -280,10 +280,16 @@ form .button input:hover {
   margin-top: 20px;
   font-size: 17px;
 }
+
 .wrapper form .signup-link a {
   color: #bc7af9;
   text-decoration: none;
 }
 form .signup-link a:hover {
   text-decoration: underline;
+}
+
+#textar {
+  width: 500px;
+  height: 100px;
 }
